@@ -1,12 +1,13 @@
 import React from "react";
 import Login from "./pages/login/index";
+import Routes from "./routes";
 
-function App() {
+const App = () => {
   return (
     <div className="App">
-      <Login />
+      <Routes />
     </div>
   );
-}
+};
 
 export default App;
