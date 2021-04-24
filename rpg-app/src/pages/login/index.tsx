@@ -8,10 +8,12 @@ import {
   TextField,
   Button,
 } from "@material-ui/core";
+import { useHistory } from "react-router-dom";
 import { useStyles } from "./styles";
 
 const Login = () => {
   const styles = useStyles();
+  const history = useHistory();
   return (
     <Container
       style={{
@@ -69,6 +71,7 @@ const Login = () => {
                     marginTop: "16px",
                     width: "100%",
                   }}
+                  onClick={() => history.push("/summary")}
                 >
                   Logar
                 </Button>
@@ -82,8 +85,12 @@ const Login = () => {
                 justifyContent: "center",
               }}
             >
-              <Box>Esqueceu sua senha?</Box>
-              <Box>Criar nova conta</Box>
+              <Box>
+                <Button>Esqueceu sua senha?</Button>
+              </Box>
+              <Box>
+                <Button>Criar nova conta</Button>
+              </Box>
             </Box>
           </Box>
         </Paper>
